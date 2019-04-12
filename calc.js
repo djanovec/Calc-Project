@@ -14,7 +14,7 @@ document.querySelectorAll(".action-button").forEach(function (val) {
     val.addEventListener("click", function () {
         var intoBuilder = numberArray.join('');
         intoBuilder = eval(intoBuilder);
-        
+
         console.log(intoBuilder);
         console.log(typeof intoBuilder);
         var total = document.getElementById("results");
@@ -43,5 +43,16 @@ document.querySelectorAll("body").forEach(function (val) {
     val.addEventListener("click", function () {
         var working = document.getElementById("working");
         working.innerText = numberArray.join('');
+    })
+})
+//Prevent multiple operators
+document.querySelectorAll(".operator").forEach(function(val) {
+    val.addEventListener("click",function () {
+      if(numberArray[numberArray.length -1] == "+" || numberArray[numberArray.length -1] == "*" || numberArray[numberArray.length -1] == "-" || numberArray[numberArray.length -1] == "/"){
+        numberArray.pop();
+        numberArray.push(val.value);
+      }
+      else
+      numberArray.push(val.value);
     })
 })
