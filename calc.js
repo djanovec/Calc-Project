@@ -48,7 +48,7 @@ document.querySelectorAll("body").forEach(function (val) {
 //Prevent multiple operators
 document.querySelectorAll(".operator").forEach(function(val) {
     val.addEventListener("click",function () {
-      if(numberArray[numberArray.length -1] == "+" || numberArray[numberArray.length -1] == "*" || numberArray[numberArray.length -1] == "-" || numberArray[numberArray.length -1] == "/"){
+      if(numberArray[numberArray.length -1] == "+" || numberArray[numberArray.length -1] == "*" || numberArray[numberArray.length -1] == "-" || numberArray[numberArray.length -1] == "/" || numberArray[numberArray.length -1] == "."){
         numberArray.pop();
         numberArray.push(val.value);
       }
